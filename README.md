@@ -225,21 +225,33 @@ Set up a Kind cluster using the AI-BankApp's config:
 
 <img width="541" height="80" alt="image" src="https://github.com/user-attachments/assets/0872e696-f644-4fcf-89fb-a2bdb821ca90" />
 
+<img width="801" height="305" alt="Image" src="https://github.com/user-attachments/assets/64385103-01ec-4236-836f-a87d6308bc24" />
+
 This creates a cluster with 1 control plane and 2 worker nodes.
 
 Install Helm:
 
 <img width="605" height="111" alt="image" src="https://github.com/user-attachments/assets/b470140c-0d9b-4e50-aa9c-fdaf4577e746" />
 
+<img width="663" height="87" alt="Image" src="https://github.com/user-attachments/assets/9edf0cc4-e925-4cc6-953a-1c94d1ada118" />
+
+<img width="753" height="47" alt="Image" src="https://github.com/user-attachments/assets/f3174131-742e-4681-bb3e-50f0a2b09d0f" />
+
 Confirm Helm can talk to your cluster:
 
 <img width="276" height="56" alt="image" src="https://github.com/user-attachments/assets/13e66c95-e021-4065-aaf0-33e43841b50a" />
+
+<img width="743" height="91" alt="Image" src="https://github.com/user-attachments/assets/2e4ebef1-901c-4887-aed1-a5aee906bb99" />
+
+<img width="647" height="33" alt="Image" src="https://github.com/user-attachments/assets/e90994fa-b950-42ca-95f9-9d67a3f48880" />
 
 Explore the raw manifests you will eventually replace with Helm:
 
 <img width="173" height="38" alt="image" src="https://github.com/user-attachments/assets/ab02eb30-fe06-4c2d-9a1e-c18671aa0917" />
 
 <img width="573" height="77" alt="image" src="https://github.com/user-attachments/assets/57a78a3d-0a99-4c57-acdd-b6b64668a294" />
+
+<img width="675" height="62" alt="Image" src="https://github.com/user-attachments/assets/eff448cb-ae96-4537-b5a4-e4da76cf23c8" />
 
 12 files -- Deployments, Services, ConfigMaps, Secrets, PVCs, HPA, and more. All hardcoded values. On Day 79, you will convert these into a Helm chart.
 
@@ -255,9 +267,13 @@ Search for MySQL:
 
 <img width="293" height="40" alt="image" src="https://github.com/user-attachments/assets/58f30da7-ba10-4b62-bace-a5f9aa273134" />
 
+<img width="696" height="143" alt="Image" src="https://github.com/user-attachments/assets/3cb8e39a-381c-4df4-b7e9-79acc5faeba4" />
+
 Deploy MySQL with the same config the AI-BankApp expects:
 
 <img width="564" height="165" alt="image" src="https://github.com/user-attachments/assets/7b2b02a4-789c-4239-985d-a6330af48cc0" />
+
+<img width="720" height="196" alt="Image" src="https://github.com/user-attachments/assets/eb562c9f-3f44-45a7-8fab-c6982c903376" />
 
 Compare this single command to the raw manifest approach which needs mysql-deployment.yml + secrets.yml + pvc.yml + pv.yml + service.yml. Helm handles all of it.
 
@@ -265,9 +281,15 @@ Check what was created:
 
 <img width="467" height="96" alt="image" src="https://github.com/user-attachments/assets/e0eb724f-9ecb-426d-b8ad-88843f332226" />
 
+<img width="962" height="241" alt="Image" src="https://github.com/user-attachments/assets/161cec7e-1f4a-41b7-b377-89df794d5220" />
+
+<img width="696" height="165" alt="Image" src="https://github.com/user-attachments/assets/bc4210fc-401f-4328-a70d-72f1cf912252" />
+
 Verify MySQL is running:
 
 <img width="592" height="43" alt="image" src="https://github.com/user-attachments/assets/6756bc21-5ea5-4d81-85c4-553efa72dd3a" />
+
+<img width="751" height="201" alt="Image" src="https://github.com/user-attachments/assets/2951a2d2-498d-4085-9e85-f8576aa58f0a" />
 
 You should see bankappdb in the output.
 
@@ -283,15 +305,23 @@ Deploy with the values file:
 
 <img width="466" height="34" alt="image" src="https://github.com/user-attachments/assets/6dc47e67-967b-4cb9-aa99-d474cb1cad89" />
 
+<img width="883" height="177" alt="Image" src="https://github.com/user-attachments/assets/923fcac8-dee3-4406-bdf1-d245d9188d01" />
+
+
 To see all configurable values for a chart:
 
 <img width="388" height="41" alt="image" src="https://github.com/user-attachments/assets/22ea9be9-c8a3-4d4e-82c0-ae082534246c" />
+
+<img width="773" height="785" alt="Image" src="https://github.com/user-attachments/assets/afcaecf5-137f-4919-95e4-a1e11e7afc39" />
+
 
 This is your reference for every knob you can turn. Notice how the chart supports metrics, replication, custom init scripts, and dozens more options -- all through values.
 
 Clean up the second release:
 
 <img width="376" height="37" alt="image" src="https://github.com/user-attachments/assets/af0c1d4b-1dca-4f97-819e-453457e2b714" />
+
+<img width="572" height="61" alt="Image" src="https://github.com/user-attachments/assets/62017709-64a4-412a-bb2b-b1bf99503ac4" />
 
 # Task 5: Manage Releases -- Upgrade, Rollback, Uninstall
 
@@ -301,9 +331,14 @@ Upgrade MySQL to enable metrics:
 
 <img width="415" height="89" alt="image" src="https://github.com/user-attachments/assets/bc7ca6f7-459d-49bb-9ae5-44951be34006" />
 
+<img width="717" height="207" alt="Image" src="https://github.com/user-attachments/assets/77984627-2198-40c8-9dc5-3e4f77c24775" />
+
+
 Check the revision history:
 
 <img width="386" height="43" alt="image" src="https://github.com/user-attachments/assets/75af73c4-44d1-4c2c-96fa-5645af6c162e" />
+
+<img width="826" height="110" alt="Image" src="https://github.com/user-attachments/assets/2ae9d329-d766-4a22-bd1d-ac81c7489866" />
 
 You should see revision 1 (original) and revision 2 (metrics enabled).
 
@@ -311,9 +346,13 @@ Rollback to the previous version:
 
 <img width="360" height="44" alt="image" src="https://github.com/user-attachments/assets/ee7a6825-f478-49b6-a5c9-5bd54fe0ff45" />
 
+<img width="623" height="55" alt="Image" src="https://github.com/user-attachments/assets/d41aa8a5-34b0-4a35-82df-e722445ad5f9" />
+
 Check history again:
 
 <img width="339" height="36" alt="image" src="https://github.com/user-attachments/assets/a5397682-52a9-4993-a25a-a56f5715dac9" />
+
+<img width="862" height="122" alt="Image" src="https://github.com/user-attachments/assets/b324593c-073a-40f5-a454-f6841b9636de" />
 
 Revision 3 appears -- a rollback to revision 1.
 
@@ -357,14 +396,7 @@ Clean up:
 
 <img width="297" height="53" alt="image" src="https://github.com/user-attachments/assets/1f35ed5e-a543-459c-8f21-87b02b533e12" />
 
-
-
-
-
-
-
-
-
+<img width="767" height="62" alt="Image" src="https://github.com/user-attachments/assets/7def66bf-1f68-4301-a784-5a1f2c296a7c" />
 
 
 
